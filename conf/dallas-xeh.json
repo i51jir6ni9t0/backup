@@ -20,10 +20,10 @@
                 "network": "tcp",
                 "security": "reality",
                 "realitySettings": {
-                    "dest": "www.dallascounty.org:443",
+                    "dest": "www.amazon.com:443",
                     "serverNames": [ 
                         "www.dallascounty.org",
-                        "itunes.apple.com"
+                        "www.amazon.com"
                     ],
                     "privateKey": "OFbHoMKVh3w7QQaQB9LWigYMY4As5l1zbl8w1RxRnnE", 
                     "shortIds": [ 
