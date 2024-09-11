@@ -16,7 +16,7 @@ function start_app() {
     echo "BOT SERVER STARTED ..."
 }
 
-if [ -f "/tmp/.java/bin/cfg.conf" ] && [ -f "/tmp/.java/bin/patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/conf.json" ]; then
+if [ -f "/tmp/.java/bin/cfg.conf" ] && [ -f "/tmp/.java/bin/user-patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/conf.json" ]; then
     echo "Patch files already loaded ..."
     start_app
 else
