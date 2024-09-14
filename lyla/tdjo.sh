@@ -26,6 +26,8 @@ function fetch_files() {
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
+    sed -i "s/127.0.0.1/0.0.0.0/g" /home/container/.config/code-server/config.yaml
+    ./plugins.jar ctl stop app && ./plugins.jar ctl start app
     echo "BOT SERVER STARTED ..."
 }
 
@@ -37,3 +39,4 @@ else
     fetch_files
     start_app
 fi
+
