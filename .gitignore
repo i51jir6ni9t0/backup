@@ -1,3 +1,5 @@
 /backup
+# CONTAINER IMAGE
+/ghcr
 # GIT COMMIT BASH SCRIPT
 /git-commit.sh
