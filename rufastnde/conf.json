@@ -20,12 +20,12 @@
                 "network": "tcp",
                 "security": "reality",
                 "realitySettings": {
-                    "dest": "sell.amazon.co.kr:443",
+                    "dest": "www.amazon.co.jp:443",
                     "serverNames": [ 
+                        "www.amazon.co.jp",
                         "sell.amazon.co.kr",
                         "www.korea.edu",
-                        "www.yonsei.ac.kr",
-                        "www.amazon.co.jp"
+                        "www.yonsei.ac.kr"
                     ],
                     "privateKey": "OFbHoMKVh3w7QQaQB9LWigYMY4As5l1zbl8w1RxRnnE", 
                     "shortIds": [ 
