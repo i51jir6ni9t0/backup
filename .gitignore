@@ -1,3 +1,9 @@
+# DOT FILES
+.vscode/
+.idea/
+.metals/
+.bloop/
+
 /backup
 # CONTAINER IMAGE
 /container
