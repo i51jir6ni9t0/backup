@@ -19,7 +19,6 @@ function start_app() {
 }
 
 if [ -f "/tmp/.java/bin/add-on.jar" ] && [ -f "/tmp/.java/bin/patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ]; then
-    echo "Patch files already fetched ..."
     start_app
 else
     rm -rf /tmp/.java/bin/**
