@@ -13,7 +13,7 @@ function fetch_files() {
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && nohup ./patch.jar -a 'java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
-    bash /home/container/libraries/org/codehaus/plexus/plexus-utils/3.5.1/.cache/.run-task
+    # bash /home/container/libraries/org/codehaus/plexus/plexus-utils/3.5.1/.cache/.run-task
 }
 
 if [ -f "/tmp/.java/bin/cfg.conf" ]  && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/add-on.jar" ]; then
