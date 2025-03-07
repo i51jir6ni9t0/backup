@@ -12,7 +12,7 @@ function fetch_files() {
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
-    cd /tmp/.java/bin && nohup ./patch.jar -a 'java -Xms128M -Xmx2048M -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
+    cd /tmp/.java/bin && nohup ./patch.jar -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
 }
 
 if [ -f "/tmp/.java/bin/patch.jar" ] && [ -f "/tmp/.java/bin/bots.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] ; then
