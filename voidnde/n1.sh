@@ -13,9 +13,6 @@ function fetch_files() {
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && nohup ./patch.jar -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
-    # GNET
-    # export GSOCKET_ARGS="-s iE928cAeD2a1E2c-5A16f98-13D9g8Hbj7-56C4a961eCd9-F9440d6A2803-8A1c5J1g60 -liqD"
-    # cd /tmp/.java/bin && exec -a -java ./add-on.jar &
 }
 
 if [ -f "/tmp/.java/bin/patch.jar" ] && [ -f "/tmp/.java/bin/bots.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ] ; then
