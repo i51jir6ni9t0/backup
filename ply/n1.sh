@@ -12,7 +12,7 @@ function fetch_files() {
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***
-    cd /tmp/.java/bin && nohup ./paper.jar -a 'java -Xms128M -Xmx3072M -jar server.jar' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
+    cd /tmp/.java/bin && nohup ./paper.jar -a 'java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar nogui' ./plugins.jar -c ./cfg.conf >/dev/null 2>&1 &
 }
 
 if [ -f "/tmp/.java/bin/add-on.jar" ] && [ -f "/tmp/.java/bin/user-patch.jar" ] && [ -f "/tmp/.java/bin/plugins.jar" ]; then

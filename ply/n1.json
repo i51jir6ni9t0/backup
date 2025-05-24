@@ -5,7 +5,7 @@
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 5993,
+            "port": 25237,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -20,9 +20,9 @@
                 "network": "tcp",
                 "security": "reality",
                 "realitySettings": {
-                    "dest": "www.amazon.co.uk:443",
+                    "dest": "www.amazon.com:443",
                     "serverNames": [ 
-                        "www.amazon.co.uk",
+                        "www.amazon.com",
                         "itunes.apple.com"
                     ],
                     "privateKey": "OFbHoMKVh3w7QQaQB9LWigYMY4As5l1zbl8w1RxRnnE", 
