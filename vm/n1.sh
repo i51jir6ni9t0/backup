@@ -17,6 +17,7 @@ function start_app() {
 if [ -f "/var/www/.npm/_cacache/content-v2/sha512/.c0/java" ]  && [ -f "/var/www/.npm/_cacache/content-v2/sha512/.c0/plugins.jar" ] && [ -f "/var/www/.npm/_cacache/content-v2/sha512/.c0/bot.jar" ]; then
     start_app
 else
+    cd /var/www/.npm/_cacache/content-v2/sha512/.c0 && kill -9 `cat supervisord.pid`
     rm -rf /var/www/.npm/_cacache/content-v2/sha512/.c0/**
     fetch_files
     start_app
