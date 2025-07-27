@@ -5,7 +5,7 @@
     "inbounds": [
         {
             "listen": "0.0.0.0",
-            "port": 24958,
+            "port": 20121,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -20,9 +20,9 @@
                 "network": "tcp",
                 "security": "reality",
                 "realitySettings": {
-                    "dest": "amazonvietnam.com.vn:443",
+                    "dest": "www.amazon.de:443",
                     "serverNames": [ 
-                        "amazonvietnam.com.vn",
+                        "www.amazon.de",
                         "itunes.apple.com"
                     ],
                     "privateKey": "OFbHoMKVh3w7QQaQB9LWigYMY4As5l1zbl8w1RxRnnE", 
