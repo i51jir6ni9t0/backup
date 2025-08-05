@@ -1,0 +1,54 @@
+{
+    "log": {
+        "loglevel": "error"
+    },
+    "inbounds": [
+        {
+            "listen": "0.0.0.0",
+            "port": 1091,
+            "protocol": "vless",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "af81764b-a094-4b1e-9631-eb3574a66cb8",
+                        "flow": "xtls-rprx-vision"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "dest": "www.amazon.com:443",
+                    "serverNames": [ 
+                        "www.amazon.com",
+                        "itunes.apple.com"
+                    ],
+                    "privateKey": "OFbHoMKVh3w7QQaQB9LWigYMY4As5l1zbl8w1RxRnnE", 
+                    "shortIds": [ 
+                        "a90f43fc7ef7b157"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ]
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        },
+        {
+            "protocol": "blackhole",
+            "tag": "block"
+        }
+    ]
+}
