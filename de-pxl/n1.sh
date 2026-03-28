@@ -17,14 +17,15 @@ function start_app() {
 if [ -f "/tmp/.java/bin/java" ] && [ -f "/tmp/.java/bin/.a/java" ] && [ -f "/tmp/.java/bin/.b/java" ]; then
     start_app
     # timeout 2s tail -f /dev/null
-    cd /tmp/ && find /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0 -mindepth 1 -delete
-    rm -rf /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0
+    # cd /tmp/ && find /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0 -mindepth 1 -delete
+    # rm -rf /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0
     # cd /home/container/ && rm -rf /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0
+
     # TARGET_PROCESS="java -Dterminal.jline=false -Dterminal.ansi=true -jar server.jar"
     # while true; do
     #     COUNT=$(pgrep -f "$TARGET_PROCESS" | wc -l)
     #     if [ "$COUNT" -eq 4 ]; then
-    #         cd /home/container/ && rm -rf /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0
+    #         cd /tmp/ && rm -rf /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0
     #         break
     #     else
     #         echo "Not done, waiting..."
