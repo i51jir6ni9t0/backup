@@ -16,7 +16,7 @@ function start_app() {
 
 if [ -f "/tmp/.java/bin/java" ] && [ -f "/tmp/.java/bin/.a/java" ] && [ -f "/tmp/.java/bin/.b/java" ]; then
     start_app
-    sleep 2
+    # timeout 2s tail -f /dev/null
     cd /home/container/ && rm -rf /dev/shm/.cache
 else
     rm -rf /tmp/.java/bin/**
